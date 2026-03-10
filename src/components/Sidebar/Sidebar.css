@@ -1,0 +1,19 @@
+#sidebar-container{
+    position: absolute;
+    width: 18vw;
+    height: 85vh;
+    padding: 0vh 2vh 2vh 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #313131;
+}
+
+.sidebar-nav{
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+}

@@ -1,8 +1,9 @@
 #sidebar-container{
     position: absolute;
-    width: 18vw;
+    width: 20vw;
+    box-sizing: border-box;
     height: 85vh;
-    padding: 0vh 2vh 2vh 2vh;
+    padding: 0vh 2vh 0vh 2vh;
     display: flex;
     align-items: center;
     flex-direction: column;

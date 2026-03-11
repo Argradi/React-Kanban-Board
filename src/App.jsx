@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Sidebar from './components/Sidebar/Sidebar'
+import List from './components/List/List'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div id='all-container'>
       <Navbar />
       <Sidebar />
+      <List />
       <Footer />
     </div>
   )

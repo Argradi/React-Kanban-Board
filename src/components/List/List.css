@@ -1,0 +1,12 @@
+#list-container{
+    position: absolute;
+    width: 80vw;
+    height: 85vh;
+    left: 20vw;
+    top: 10vh;
+    padding: 5vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+}

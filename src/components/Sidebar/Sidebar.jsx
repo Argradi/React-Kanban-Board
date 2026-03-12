@@ -1,16 +1,17 @@
 import './Sidebar.css'
+import { Link } from 'react-router-dom'
 
 function Sidebar() {
     return (
         <div id="sidebar-container">
             <nav className="sidebar-nav">
-                <a>Home</a>
+                <Link to='/'>Home</Link>
             </nav>
             <nav className="sidebar-nav">
-                <a>Add task</a>
+                <Link>Add task</Link>
             </nav>
             <nav className="sidebar-nav">
-                <a>About</a>
+                <Link to='/about'>About</Link>
             </nav>
         </div>
     )

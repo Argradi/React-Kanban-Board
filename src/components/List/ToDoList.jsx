@@ -7,15 +7,20 @@ function List () {
 
     const [list, setList] = useState(kanban)
 
+    const toDo = list.filter((item) => {
+        return item.status === 'To Do'
+    })
+
     const deleteItem = (itemId) => {
-        setList(list.filter((item) => {
+        setList(toDo.filter((item) => {
             return item.id !== itemId
         }))
     }
 
     return (
-        <div id='list-container'>
-            {list.map((item) => {
+        <div className='list-container'>
+            <h3>To Do</h3>
+            {toDo.map((item) => {
                 return (
                     <ListCard
                         key={item.id}

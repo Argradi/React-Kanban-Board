@@ -1,12 +1,19 @@
-#list-container{
-    position: absolute;
-    width: 80vw;
-    height: 85vh;
-    left: 20vw;
-    top: 10vh;
-    padding: 5vh;
+.list-container{
+    position: relative;
     box-sizing: border-box;
+    width: 30%;
+    height: 90%;
+    padding: 4vh;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     color: white;
+    background-color: rgb(22, 22, 22);
+    border-radius: 15px;
+    margin-right: 30px;
+    margin-bottom: 0;
+}
+
+.list-container h3{
+    margin: 0;
 }

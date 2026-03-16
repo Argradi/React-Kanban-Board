@@ -1,31 +1,16 @@
-import { useState } from 'react'
-import kanban from '../../data/kanban.json'
 import ListCard from './ListCard'
 import './List.css'
 
-function List () {
-
-    const [list, setList] = useState(kanban)
-
-    const toDo = list.filter((item) => {
-        return item.status === 'In Progress'
-    })
-
-    const deleteItem = (itemId) => {
-        setList(toDo.filter((item) => {
-            return item.id !== itemId
-        }))
-    }
-
+function List (props) {
     return (
         <div className='list-container'>
             <h3>In Progress</h3>
-            {toDo.map((item) => {
+            {props.inProgress.map((item) => {
                 return (
                     <ListCard
                         key={item.id}
                         item={item}
-                        onDelete={deleteItem}
+                        onDelete={props.onDelete}
                     />
                 )
             })}

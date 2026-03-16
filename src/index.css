@@ -83,3 +83,32 @@ button:focus-visible {
     align-items: flex-start;
     color: white;
 }
+
+#add-item{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  max-height: 450px;
+}
+
+#add-item label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#add-item input, 
+#add-item select, 
+#add-item textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+}
+
+#add-item button {
+  margin-top: 20px;
+  cursor: pointer;
+}

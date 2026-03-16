@@ -1,27 +1,22 @@
-import { useParams } from "react-router-dom";
-import { useState } from 'react'
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function ItemDetailsPage (props) {
-
-    const {itemId} = useParams()
-    const itemDetail = props.list.find((item) => item.id === itemId)
+function AddItemPage (props) {
 
     const navigate = useNavigate()
 
-    const [title, setTitle] = useState(itemDetail.title)
-    const [description, setDescription] = useState(itemDetail.description)
-    const [assignee, setAssignee] = useState(itemDetail.assignee)
-    const [status, setStatus] = useState(itemDetail.status)
-    const [priority, setPriority] = useState(itemDetail.priority)
-    const [createdDate, setCreatedDate] = useState(itemDetail.createdDate)
-    const [dueDate, setDueDate] = useState(itemDetail.dueDate)
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [assignee, setAssignee] = useState('')
+    const [status, setStatus] = useState('To Do')
+    const [priority, setPriority] = useState('Low')
+    const [createdDate, setCreatedDate] = useState('')
+    const [dueDate, setDueDate] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const updatedItem = {
-            id: itemId,
+        const newItem = {
             title: title,
             description: description,
             assignee: assignee,
@@ -29,9 +24,9 @@ function ItemDetailsPage (props) {
             priority: priority,
             createdDate: createdDate,
             dueDate: dueDate
-        };
+        }
 
-        props.onUpdate(updatedItem);
+        props.onCreate(newItem)
 
         navigate("/")
     }
@@ -69,8 +64,6 @@ function ItemDetailsPage (props) {
                     Status:
                     <select value={status} onChange={(e) => setStatus(e.target.value)}>
                         <option value="To Do">To Do</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Done">Done</option>
                     </select>
                 </label>
 
@@ -101,10 +94,10 @@ function ItemDetailsPage (props) {
                     />
                 </label>
 
-                <button>Save</button>
+                <button>Create</button>
             </form>
         </div>
     )
 }
 
-export default ItemDetailsPage
+export default AddItemPage

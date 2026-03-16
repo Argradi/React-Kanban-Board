@@ -8,7 +8,7 @@ function Sidebar() {
                 <Link to='/'>Home</Link>
             </nav>
             <nav className="sidebar-nav">
-                <Link>Add task</Link>
+                <Link to='/create'>Add task</Link>
             </nav>
             <nav className="sidebar-nav">
                 <Link to='/about'>About</Link>

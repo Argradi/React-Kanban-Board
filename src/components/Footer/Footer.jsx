@@ -3,7 +3,7 @@ import './Footer.css'
 function Footer() {
     return (
         <div id="footer-container">
-            <h4>Github Repo</h4>
+            <a href="https://github.com/Argradi/React-Kanban-Board"><h4>Github Repo</h4></a>
         </div>
     )
 }

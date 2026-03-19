@@ -6,7 +6,8 @@ import { Routes, Route } from 'react-router-dom'
 import DashboardPage from './pages/DashboardPage'
 import ItemDetailsPage from './pages/ItemDetailsPage'
 import AboutPage from './pages/AboutPage'
-import AddItemPage from './pages/AddItemPAge'
+import AddItemPage from './pages/AddItemPage'
+import NotFoundPage from './pages/NotFoundPage'
 import kanban from './data/kanban.json'
 import { useState } from 'react'
 
@@ -79,6 +80,7 @@ function App() {
         <Route path='/item/:itemId' element={<ItemDetailsPage list={list} onUpdate={updateItem}/>} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/create' element={<AddItemPage onCreate={createItem} />} />
+        <Route path='*' element={<NotFoundPage />}/>
       </Routes>
       <Footer />
     </div>

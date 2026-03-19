@@ -101,14 +101,24 @@ button:focus-visible {
 #add-item input, 
 #add-item select, 
 #add-item textarea {
-    width: 100%;
+    width: 500px;
     padding: 5px;
     border: 1px solid #444;
     color: white;
     border-radius: 4px;
 }
 
+#add-item textarea{
+  height: 50px;
+}
+
 #add-item button {
+  width: 200px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
 }
